@@ -3,7 +3,7 @@
 		<div class="row title">
 				<h2 class="span5">"<%= @featured.title %>"</h2>
 				<div class="span1 category">
-					<span class="label" style=""><%= @featured.category.title %></span>
+					<span class="label"><%= @featured.category.title %></span>
 				</div>
 		</div>
 		
@@ -42,7 +42,9 @@
 
 			<div class="episode">
 				<div class="episode-info">
-					<span class="label category"><%= episode.category.title %></span>
+					<div class="category">
+						<span class="label"><%= episode.category.title %></span>
+					</div>
 				</div>
 
 				<div class='episode-image'>  
@@ -53,7 +55,7 @@
 				    <!-- description div -->
 				    <div class='episode-description'>
 				        <!-- description content -->
-				        <div class='description_content'><%= episode.title %></div>  
+				        <div class='description_content'><%= episode.title %></div>
 				        <!-- end description content -->  
 				    </div>  
 				    <!-- end description div -->  
@@ -63,7 +65,7 @@
 					<span class="episode-interviewee"><%= episode.interviewee.name %> from <%= episode.interviewee.company %></span>
 				</div>
 			</div>
-			
+
 		<% end %>
 
 		<%= image_tag "http://nspire.org/sites/default/files/nspire_logo_0.png", :class => "nspire-logo" %>

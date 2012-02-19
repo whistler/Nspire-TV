@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<div class="navbar navbar-fixed-top">
+<div class="navbar">
   <div class="navbar-inner">
     <div class="container">
       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -18,12 +18,12 @@
       <!-- <a class="brand" href="#">Project name</a> -->
       <div class="nav-collapse">
         <ul class="nav">
-          <li><a href="#">Nspire</a></li>
-          <li><a href="#about">NBTC</a></li>
-          <li><a href="#contact">Discovery</a></li>
-		  <li><a href="#contact">JOT</a></li>
-		  <li><a href="#contact">Nteract</a></li>
-		  <li><a href="#contact">Nspire TV</a></li>
+          <li><a href="http://nspire.org">Nspire</a></li>
+          <li><a href="http://nbtc.ca">NBTC</a></li>
+          <li><a href="http://discovery.nspire.org/">Discovery</a></li>
+		      <li><a href="http://jot.nspire.org/">JOT</a></li>
+		      <li><a href="http://nteract.nspire.org/">Nteract</a></li>
+		      <li><a href="<%= root_url %>">Nspire TV</a></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
@@ -46,10 +46,12 @@
   	<%= yield %>
   </div>
 
+</div>
+
   <div class="footer">
       <p>Nspire TV &copy; 2012</p>
   </div>
-</div>
+
 
 <%= javascript_include_tag "http://typeface.neocracy.org/typeface-0.15.js" %>
 <%= javascript_include_tag "application" %>
