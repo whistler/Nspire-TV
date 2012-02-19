@@ -30,22 +30,25 @@
   </div>
 </div>
 
-<div class="inner-container">
-	<div class="row header">
-		<div class="span4">
-			<a href="<%= root_path %>"><%= image_tag "logo.png" %></a>
-		</div>
-		<div class="span6">
-			<h1>Insert Mission Statement Here</h1>
-		</div>
-	</div>
-  
-  <%= image_tag "blue_seperator.png" %>	
-	<%= yield %>
-</div>
+<div class="container">
 
-<div class="footer">
-    <p>Nspire TV &copy; 2012</p>
+  <div class="inner-container">
+  	<div class="row header">
+  		<div class="span4">
+  			<a href="<%= root_path %>"><%= image_tag "logo.png" %></a>
+  		</div>
+  		<div class="span6">
+  			<h1>Insert Mission Statement Here</h1>
+  		</div>
+  	</div>
+    
+    <%= image_tag "blue_seperator.png" %>	
+  	<%= yield %>
+  </div>
+
+  <div class="footer">
+      <p>Nspire TV &copy; 2012</p>
+  </div>
 </div>
 
 <%= javascript_include_tag "http://typeface.neocracy.org/typeface-0.15.js" %>

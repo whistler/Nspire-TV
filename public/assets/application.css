@@ -2,8 +2,6 @@
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
-
-
 */
 
 
@@ -11,8 +9,13 @@ body {
 	background: url(/assets/background.png) repeat;
 }
 
+.container {
+	text-align: center;
+}
+
 .inner-container {
-	width: 850px;
+	display: inline-block;
+	text-align: left;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -4101,7 +4104,7 @@ a.thumbnail:hover {
 }
 .video .category {
 	margin-top: 20px;
-	padding-left: 50px;
+	float: right;
 }
 
 .video .category span {
@@ -4121,7 +4124,7 @@ a.thumbnail:hover {
 }
 
 .video .social {
-	padding-left: 50px;
+	padding-left: 30px;
 }
 
 .video .description {
@@ -4148,9 +4151,14 @@ a.thumbnail:hover {
 }
 
 
+.episode {
+	width: 256px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 10px;
+}
+
 div.episode-image {
-	margin-top: 25px;
-	margin-left: 10px;
     position:relative; /* important(so we can absolutely position the description div */  
 }
 
@@ -4185,21 +4193,21 @@ div.episode-image {
     padding:10px;  
 }
 
-.episode-info {
-	width: 256px;
-	padding-left: 10px;
-}
-
 .episode-info .episode-interviewee {
 	font-weight: bold;
 }
 
+.episode-info {	
+	padding-bottom: 25px;	
+}
+
 .episode-info .category {
 	float: right;
+
 }
 
 .nspire-logo {
-	padding-top: 20px;
+	padding-top: 0px;
 	width: 128px; 
 	height: 45px;
 	margin-left: 70px;

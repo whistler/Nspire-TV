@@ -40,28 +40,33 @@
 
 		<% @episodes.each do |episode| %>
 
-			<div class='episode-image'>  
-			    <!-- image -->
-			    <a href="<%= episode_url(episode) %>">
-			    	<%= image_tag episode.video_thumbnail_url %>
-			    </a>
-			    <!-- description div -->
-			    <div class='episode-description'>
-			        <!-- description content -->
-			        <div class='description_content'><%= episode.title %></div>  
-			        <!-- end description content -->  
-			    </div>  
-			    <!-- end description div -->  
-			</div>
+			<div class="episode">
+				<div class="episode-info">
+					<span class="label category"><%= episode.category.title %></span>
+				</div>
 
-			<div class="episode-info">
-				<span class="episode-interviewee"><%= episode.interviewee.name %></span>
-				<span class="label category"><%= episode.category.title %></span>
+				<div class='episode-image'>  
+				    <!-- image -->
+				    <a href="<%= episode_url(episode) %>">
+				    	<%= image_tag episode.video_thumbnail_url %>
+				    </a>
+				    <!-- description div -->
+				    <div class='episode-description'>
+				        <!-- description content -->
+				        <div class='description_content'><%= episode.title %></div>  
+				        <!-- end description content -->  
+				    </div>  
+				    <!-- end description div -->  
+				</div>
+
+				<div class="episode-info">
+					<span class="episode-interviewee"><%= episode.interviewee.name %> from <%= episode.interviewee.company %></span>
+				</div>
 			</div>
+			
 		<% end %>
 
 		<%= image_tag "http://nspire.org/sites/default/files/nspire_logo_0.png", :class => "nspire-logo" %>
-		<br />
 	</div>
 </div>
 
