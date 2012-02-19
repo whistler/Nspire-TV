@@ -1,0 +1,75 @@
+
+---
+episodes:
+  columns:
+  - id
+  - title
+  - description
+  - video_url
+  - category_id
+  - interviewee_id
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Why You Should Be Stupid
+    - Insert description here. Nam sapien urna, pretium id pellentesque non, vehicula
+      vulputate sapien. Vivamus mauris diam, venenatis quis malesuada ac, laoreet
+      sit amet leo. Nullam odio turpis, blandit faucibus facilisis vel, fermentum
+      sit amet mi. Nulla suscipit faucibus justo viverra pellentesque.
+    - http://vimeo.com/28203447
+    - 1
+    - 1
+    - '2012-02-17 22:57:53.479087'
+    - '2012-02-19 04:50:12.220851'
+  - - 2
+    - Toronto Entrepreneurship
+    - Insert description here. Nam sapien urna, pretium id pellentesque non, vehicula
+      vulputate sapien. Vivamus mauris diam, venenatis quis malesuada ac, laoreet
+      sit amet leo. Nullam odio turpis, blandit faucibus facilisis vel, fermentum
+      sit amet mi. Nulla suscipit faucibus justo viverra pellentesque.
+    - http://vimeo.com/7239354
+    - 2
+    - 2
+    - '2012-02-19 05:43:44.032898'
+    - '2012-02-19 05:43:44.032898'
+
+---
+interviewees:
+  columns:
+  - id
+  - name
+  - company
+  - position
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Farhan Thawar
+    - Xtreme Labs Inc.
+    - VP of Engineering
+    - '2012-02-17 22:55:15.658819'
+    - '2012-02-17 22:55:15.658819'
+  - - 2
+    - Satish Kanwar
+    - Jetcooper
+    - Partner
+    - '2012-02-19 05:39:17.317131'
+    - '2012-02-19 05:39:17.317131'
+
+---
+categories:
+  columns:
+  - id
+  - title
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - Startups
+    - '2012-02-17 22:53:04.371977'
+    - '2012-02-17 22:53:04.371977'
+  - - 2
+    - Business
+    - '2012-02-17 22:54:02.798334'
+    - '2012-02-17 22:54:02.798334'

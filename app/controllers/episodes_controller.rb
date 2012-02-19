@@ -1,6 +1,6 @@
 class EpisodesController < ApplicationController
 	def index
-		@episodes = Episode.all
+		@episodes = Episode.find(:all)
 		@featured = @episodes.last
 
 		respond_to do |f|
@@ -9,7 +9,7 @@ class EpisodesController < ApplicationController
 	end
 
 	def show
-		@episodes = Episode.all
+		@episodes = Episode.find(:all)
 		@featured = Episode.find(params[:id])
 
 		render 'index'

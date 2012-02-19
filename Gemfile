@@ -8,6 +8,7 @@ gem 'rails', '3.2'
 gem 'sqlite3'
 
 gem 'heroku'
+gem 'yaml_db', :git => "git://github.com/lostapathy/yaml_db.git"
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -23,7 +24,7 @@ gem 'jquery-rails'
 # Use unicorn as the web server
 # gem 'unicorn'
 
-# Deploy with Capistrano
+# Deploy with Capistran, :git => "git://github.com/lostapathy/yaml_db.git"o
 # gem 'capistrano'
 
 # To use debugger
