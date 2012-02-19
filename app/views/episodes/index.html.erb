@@ -1,7 +1,7 @@
 <div class="row">
-	<div class="span7 video">
+	<div class="span8 video">
 		<div class="row title">
-				<h2 class="span5">"<%= @featured.title %>"</h2>
+				<h2 class="span6">"<%= @featured.title %>"</h2>
 				<div class="span1 category">
 					<span class="label"><%= @featured.category.title %></span>
 				</div>
@@ -15,27 +15,24 @@
 		<!-- <img src="http://placehold.it/640x390" class="embed" /> -->
 
 		<!-- Video info -->
-		<div class="row description">
-			<div class="span5">
-				<p><%= @featured.interviewee.name %></p>
-				<p><%= @featured.interviewee.position %> at <%= @featured.interviewee.company %></p>
-			</div>
-			<div class="span1 social">
-				<div class="fb-like" data-href="<%= episode_url(@featured) || root_path %>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-action="recommend"></div>
+		<div class="description">
+			<p><%= @featured.interviewee.name %> &mdash; <%= @featured.interviewee.position %> at <%= @featured.interviewee.company %></p>
 
-				<a href="https://twitter.com/share" class="twitter-share-button" data-url="<%= episode_url(@featured) %>" data-text='"<%= @featured.title %>" - <%= @featured.interviewee.name %> @' data-via="Nspire" data-hashtags="NspireTV">Tweet</a>
-			</div>
+		<div class="social">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-url="<%= episode_url(@featured) %>" data-text='"<%= @featured.title %>" - <%= @featured.interviewee.name %> @' data-via="Nspire" data-hashtags="NspireTV">Tweet</a>
+
+			<div class="fb-like" data-href="<%= episode_url(@featured) || root_path %>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-action="recommend"></div>			
 		</div>
-
+		</div>
 		<p class="long-description">
-			Insert description here. Nam sapien urna, pretium id pellentesque non, vehicula vulputate sapien. Vivamus mauris diam, venenatis quis malesuada ac, laoreet sit amet leo. Nullam odio turpis, blandit faucibus facilisis vel, fermentum sit amet mi. Nulla suscipit faucibus justo viverra pellentesque. 
+			Insert description here. Nam sapien urna, pretium id pellentesque non, vehicula vulputate sapien. Vivamus mauris diam, venenatis quis malesuada ac, laoreet sit amet leo. Nullam odio turpis, blandit faucibus facilisis vel, fermentum sit amet mi. Nulla suscipit faucibus justo viverra pellentesque.
 		</p>
 
 	</div>
 
 
 
-	<div class="span3 episodes">
+	<div class="span2 episodes">
 		<%= image_tag "vertical_seperator.png", :class => "vertical-seperator" %>	
 
 		<% @episodes.each do |episode| %>
@@ -55,20 +52,15 @@
 				    <!-- description div -->
 				    <div class='episode-description'>
 				        <!-- description content -->
-				        <div class='description_content'><%= episode.title %></div>
-				        <!-- end description content -->  
+				        <div class='description_content'><%= episode.interviewee.name %>, <%= episode.interviewee.company %> - <%= episode.title %></div>
+				        <!-- end description content -->
 				    </div>  
 				    <!-- end description div -->  
 				</div>
-
-				<div class="episode-info">
-					<span class="episode-interviewee"><%= episode.interviewee.name %> from <%= episode.interviewee.company %></span>
-				</div>
 			</div>
-
 		<% end %>
 
-		<%= image_tag "http://nspire.org/sites/default/files/nspire_logo_0.png", :class => "nspire-logo" %>
+		<%= image_tag 'light_bulb.png', :class => "nspire-logo" %>
 	</div>
 </div>
 

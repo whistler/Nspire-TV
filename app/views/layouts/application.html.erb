@@ -31,18 +31,17 @@
 </div>
 
 <div class="container">
-
   <div class="inner-container">
   	<div class="row header">
   		<div class="span4">
   			<a href="<%= root_path %>"><%= image_tag "logo.png" %></a>
   		</div>
-  		<div class="span6">
-  			<h1>Insert Mission Statement Here</h1>
+  		<div class="span7">
+  			<h2>inspiring young leaders from around the world</h2>
   		</div>
+      <%= image_tag "blue_seperator.png", :class => 'header' %> 
   	</div>
     
-    <%= image_tag "blue_seperator.png" %>	
   	<%= yield %>
   </div>
 
