@@ -3,12 +3,61 @@
 <head>
   <title>NspireTV</title>
   <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <!-- <a class="brand" href="#">Project name</a> -->
+      <div class="nav-collapse">
+        <ul class="nav">
+          <li><a href="#">Nspire</a></li>
+          <li><a href="#about">NBTC</a></li>
+          <li><a href="#contact">Discovery</a></li>
+		  <li><a href="#contact">JOT</a></li>
+		  <li><a href="#contact">Nteract</a></li>
+		  <li><a href="#contact">Nspire TV</a></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>
 
+<div class="inner-container">
+	<div class="row header">
+		<div class="span4">
+			<a href="<%= root_path %>"><%= image_tag "logo.png" %></a>
+		</div>
+		<div class="span6">
+			<h1>Insert Mission Statement Here</h1>
+		</div>
+	</div>
+  
+  <%= image_tag "blue_seperator.png" %>	
+	<%= yield %>
+</div>
+
+<div class="footer">
+    <p>Nspire TV &copy; 2012</p>
+</div>
+
+<%= javascript_include_tag "http://typeface.neocracy.org/typeface-0.15.js" %>
+<%= javascript_include_tag "application" %>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=325287497523746";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </body>
 </html>
