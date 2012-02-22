@@ -1,54 +1,87 @@
 	<div class="video">
 		<div class="category">
-			<span class="label"><%= @featured.category.title %></span>
-		</div>	
+				<span class="label"><%= @featured.category.title %></span>
+		</div>				
 		<!-- Video -->
 		<div class="embed">
 			<%= raw @featured.video_embed_html %>
 		</div>
 
 		<div class="row title">
-			<h2 class="span6">"<%= @featured.title %>"</h2>
-			<div class="span4 social">
+			<div class="span5">
+				<h2>"<%= @featured.title %>"</h2>				
+			</div>
 
-				<div class="fb-like social-elem" data-href="<%= episode_url(@featured) || root_path %>" data-send="false" data-layout="button_count" data-width="120" data-show-faces="false" data-action="recommend"></div>
+			<div class="span5">
+				<div class="description">
+					<p><%= @featured.interviewee.name %> &mdash; <%= @featured.interviewee.position %> at <%= @featured.interviewee.company %></p>
+				</div>
 
-				<a href="https://twitter.com/share" class="twitter-share-button social-elem" data-url="<%= episode_url(@featured) %>" data-text='"<%= @featured.title %>" - <%= @featured.interviewee.name %> @' data-via="Nspire" data-hashtags="NspireTV" data-count="none">Tweet</a>
+				<div class="social">
+					<div class="fb-like social-elem" data-href="<%= episode_url(@featured) || root_path %>" data-send="false" data-layout="button_count" data-width="120" data-show-faces="false" data-action="recommend"></div>
+
+					<a href="https://twitter.com/share" class="twitter-share-button social-elem" data-url="<%= episode_url(@featured) %>" data-text='"<%= @featured.title %>" - <%= @featured.interviewee.name %> @' data-via="Nspire" data-hashtags="NspireTV" data-count="none">Tweet</a>				
+
+					<a href="http://pinterest.com/pin/create/button/?url=<%= episode_url(@featured)%>&media=<%= @featured.video_thumbnail_url %>" class="pin-it-button social-elem" style="display: inline-block;" count-layout="none">Pin It</a>
+
+
+				</div>				
 			</div>		
 		</div>
-
-		<!-- Video info -->
-		<div class="description">
-			<p><%= @featured.interviewee.name %> &mdash; <%= @featured.interviewee.position %> at <%= @featured.interviewee.company %></p>
-		</div>
-		<p class="long-description">
+<!-- 		<p class="long-description">
 			Insert description here. Nam sapien urna, pretium id pellentesque non, vehicula vulputate sapien. Vivamus mauris diam, venenatis quis malesuada ac, laoreet sit amet leo. Nullam odio turpis, blandit faucibus facilisis vel, fermentum sit amet mi. Nulla suscipit faucibus justo viverra pellentesque.
-		</p>
+		</p> -->
 	</div>
 
-<%= image_tag "gray_seperator.png", :class => 'comments-seperator' %>
+	<%= image_tag "gray_seperator.png", :class => "comments-seperator" %>
 
-<div class="post-fold">
-	<div class="row">
-		<div class="span5">
-			<h3>Comments</h3>
-			<div class="fb-comments" data-href="<%= episode_url(@featured) %>" data-num-posts="2" data-width="380"></div>
+	<div class="row post-fold">
+		<div class="span7 comments">
+			<h4 class="underlined">Comments</h4>
+			<div class="fb-comments" data-href="<%= episode_url(@featured) %>" data-num-posts="2" data-width="600"></div>				
 		</div>
-		<div class="span5 episodes">
-			<h3>Other Interviews</h3>
-			<% @episodes.each do |episode| %>
-				<div class="episode">
-					<div class='episode-image'>
-					    <a href="<%= episode_url(episode) %>">
-					    	<%= image_tag episode.video_thumbnail_url %>
-					    </a>
 
-					    <div class='episode-description'>
-					        <div class='description_content'>"<%= episode.title %>"</div>
-					    </div>
+		<div class="span3">
+			<%= image_tag "vertical_seperator.png", :class => "vertical-seperator" %>
+			<h4 class="underlined">Other Interviews</h4>
+			<div class="episodes">
+				<% @episodes.each do |episode| %>
+					<div class="episode">
+						<div class='episode-image'>
+						    <a href="<%= episode_url(episode) %>">
+						    	<%= image_tag episode.video_thumbnail_url %>
+						    </a>
+
+						    <div class='episode-description'>
+						        <div class='description_content'>"<%= episode.title %>"</div>
+						    </div>
+						</div>
 					</div>
-				</div>
-			<% end %>
+
+					<div class="episode">
+						<div class='episode-image'>
+						    <a href="<%= episode_url(episode) %>">
+						    	<%= image_tag episode.video_thumbnail_url %>
+						    </a>
+
+						    <div class='episode-description'>
+						        <div class='description_content'>"<%= episode.title %>"</div>
+						    </div>
+						</div>
+					</div>
+					
+					<div class="episode">
+						<div class='episode-image'>
+						    <a href="<%= episode_url(episode) %>">
+						    	<%= image_tag episode.video_thumbnail_url %>
+						    </a>
+
+						    <div class='episode-description'>
+						        <div class='description_content'>"<%= episode.title %>"</div>
+						    </div>
+						</div>
+					</div>										
+				<% end %>
+			</div>
 		</div>
 	</div>
-</div>

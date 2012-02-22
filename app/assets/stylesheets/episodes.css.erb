@@ -1,5 +1,5 @@
 .video {
-	margin-top: -20px;
+	margin-top: 5px;
 	width: 800px;
 	margin-right: auto;
 	margin-left: auto;
@@ -25,6 +25,10 @@
 	line-height: 20px;
 }
 
+.video .title p {
+	font-weight: bold;
+}
+
 .video .embed iframe {
 	width: 800px;
 	height: 450px;
@@ -35,7 +39,7 @@
 
 .video .social {
 	margin-top: 2px;
-	width: 240px;
+	width: 290px;
 	float: right;
 	text-align: right;
 }
@@ -45,12 +49,11 @@
 }
 
 .video .description {
-	
+	text-align: right;	
 }
 
-.video .description p {
-	margin-top: 10px;	
-	line-height: 70%;
+.video .description p {	
+	line-height: 100%;
 	font-weight: 600;
 }
 
@@ -59,20 +62,23 @@
 }
 
 .vertical-seperator {
-	margin-top: 5px;
 	position: absolute;
+	margin-left: -10px;
+	margin-top: 10px;
 	height: 500px;
-	padding-right: 5px;
+	padding-right: 10px;
 }
 
 .episodes {
-	width: 400px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+	max-height: 500px;
 	overflow: auto;
 }
 
 .episode {
-	display: inline-block;
-	float: left;
 	width: 192px;
 	padding-top: 5px;
 	padding-left: 5px;
@@ -130,25 +136,32 @@ div.episode-image {
 }
 
 .comments-seperator {
-	padding-top: 10px;
-	padding-bottom: 10px;
-	width: 800px;
+	left: 0;
+	position: absolute;
+	height: 1px;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
 }
 
+.comments {
+	width: 600px;
+}
 .fb-comments {
 	padding-top: 4px;
 }
 
 .post-fold {
-	width: 800px;
+	margin-top: 10px;
+	padding-left: 40px;
+	padding-right: 40px;
+	display: block;
 	margin-right: auto;
 	margin-left: auto;
 	padding-bottom: 10px;
 }
 
-.post-fold h3 {
+.underlined {
 	border-bottom: 1px #333 solid;
 }

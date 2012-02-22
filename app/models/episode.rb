@@ -6,8 +6,8 @@ class Episode < ActiveRecord::Base
 
 	VIMEO_OMEMBED_URL = "http://vimeo.com/api/oembed.json?url="
 
-	VIDEO_HEIGHT = "800" 
-	VIDEO_WIDTH = "450"
+	VIDEO_WIDTH = "800"
+	VIDEO_HEIGHT = "450" 
 
 	def get_oembed_json
 		oembed = VIMEO_OMEMBED_URL + video_url + "&width=" + VIDEO_WIDTH + "&height=" + VIDEO_HEIGHT + "&title=false&portrait=false&byline=false&xhtml=true"
