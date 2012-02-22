@@ -4133,7 +4133,6 @@ a.thumbnail:hover {
 	text-transform: uppercase;
 }
 
-
 .video .title {
 	position: relative;		
 }
@@ -4153,9 +4152,14 @@ a.thumbnail:hover {
 }
 
 .video .social {
+	margin-top: 2px;
 	width: 240px;
 	float: right;
 	text-align: right;
+}
+
+.video .social .social-elem {
+	vertical-align: top;
 }
 
 .video .description {

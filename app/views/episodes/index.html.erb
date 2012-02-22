@@ -10,11 +10,10 @@
 		<div class="row title">
 			<h2 class="span6">"<%= @featured.title %>"</h2>
 			<div class="span4 social">
-<!-- 				<div class="fb-like social-elem" data-href="<%= episode_url(@featured) || root_path %>" data-send="false" data-layout="button_count" data-width="120" data-show-faces="false" data-action="recommend"></div>			
-				<a href="https://twitter.com/share" class="twitter-share-button social-elem" data-url="<%= episode_url(@featured) %>" data-text='"<%= @featured.title %>" - <%= @featured.interviewee.name %> @' data-via="Nspire" data-hashtags="NspireTV" data-count="none">Tweet</a> -->
 
-				<span class='st_fbrec_hcount' displayText='Facebook Recommend'></span>
-				<span class='st_twitter_hcount' displayText='Tweet'></span>
+				<div class="fb-like social-elem" data-href="<%= episode_url(@featured) || root_path %>" data-send="false" data-layout="button_count" data-width="120" data-show-faces="false" data-action="recommend"></div>
+
+				<a href="https://twitter.com/share" class="twitter-share-button social-elem" data-url="<%= episode_url(@featured) %>" data-text='"<%= @featured.title %>" - <%= @featured.interviewee.name %> @' data-via="Nspire" data-hashtags="NspireTV" data-count="none">Tweet</a>
 			</div>		
 		</div>
 
