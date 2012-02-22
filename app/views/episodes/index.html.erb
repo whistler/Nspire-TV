@@ -1,69 +1,52 @@
-<div class="row">
-	<div class="span8 video">
-		<div class="row title">
-				<h2 class="span6">"<%= @featured.title %>"</h2>
-				<div class="span1 category">
-					<span class="label"><%= @featured.category.title %></span>
-				</div>
-		</div>
-		
+	<div class="video">
+		<div class="category">
+			<span class="label"><%= @featured.category.title %></span>
+		</div>	
 		<!-- Video -->
-
 		<div class="embed">
 			<%= raw @featured.video_embed_html %>
 		</div>
-		<!-- <img src="http://placehold.it/640x390" class="embed" /> -->
+
+		<div class="row title">
+			<h2 class="span7">"<%= @featured.title %>"</h2>
+			<div class="span3 social">
+				<div class="fb-like social-elem" data-href="<%= episode_url(@featured) || root_path %>" data-send="false" data-layout="button_count" data-width="120" data-show-faces="false" data-action="recommend"></div>			
+				<a href="https://twitter.com/share" class="twitter-share-button social-elem" data-url="<%= episode_url(@featured) %>" data-text='"<%= @featured.title %>" - <%= @featured.interviewee.name %> @' data-via="Nspire" data-hashtags="NspireTV" data-count="none">Tweet</a>
+			</div>		
+		</div>
 
 		<!-- Video info -->
 		<div class="description">
 			<p><%= @featured.interviewee.name %> &mdash; <%= @featured.interviewee.position %> at <%= @featured.interviewee.company %></p>
-
-		<div class="social">
-			<a href="https://twitter.com/share" class="twitter-share-button" data-url="<%= episode_url(@featured) %>" data-text='"<%= @featured.title %>" - <%= @featured.interviewee.name %> @' data-via="Nspire" data-hashtags="NspireTV">Tweet</a>
-
-			<div class="fb-like" data-href="<%= episode_url(@featured) || root_path %>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-action="recommend"></div>			
-		</div>
 		</div>
 		<p class="long-description">
 			Insert description here. Nam sapien urna, pretium id pellentesque non, vehicula vulputate sapien. Vivamus mauris diam, venenatis quis malesuada ac, laoreet sit amet leo. Nullam odio turpis, blandit faucibus facilisis vel, fermentum sit amet mi. Nulla suscipit faucibus justo viverra pellentesque.
 		</p>
-
 	</div>
-
-
-
-	<div class="span2 episodes">
-		<%= image_tag "vertical_seperator.png", :class => "vertical-seperator" %>	
-
-		<% @episodes.each do |episode| %>
-
-			<div class="episode">
-				<div class="episode-info">
-					<div class="category">
-						<span class="label"><%= episode.category.title %></span>
-					</div>
-				</div>
-
-				<div class='episode-image'>  
-				    <!-- image -->
-				    <a href="<%= episode_url(episode) %>">
-				    	<%= image_tag episode.video_thumbnail_url %>
-				    </a>
-				    <!-- description div -->
-				    <div class='episode-description'>
-				        <!-- description content -->
-				        <div class='description_content'><%= episode.interviewee.name %>, <%= episode.interviewee.company %> - <%= episode.title %></div>
-				        <!-- end description content -->
-				    </div>  
-				    <!-- end description div -->  
-				</div>
-			</div>
-		<% end %>
-
-		<%= image_tag 'light_bulb.png', :class => "nspire-logo" %>
-	</div>
-</div>
 
 <%= image_tag "gray_seperator.png", :class => 'comments-seperator' %>
 
-<div class="fb-comments" data-href="<%= episode_url(@featured) || root_path %>" data-num-posts="4" data-width="800"></div>
+<div class="post-fold">
+	<div class="row">
+		<div class="span5 fb-comments">
+			<h3>Comments:</h3>
+			<div class="fb-comments" data-href="<%= episode_url(@featured) %>" data-num-posts="2" data-width="380"></div>
+		</div>
+		<div class="span5 episodes">
+			<h3>Other Interviews:</h3>
+			<% @episodes.each do |episode| %>
+				<div class="episode">
+					<div class='episode-image'>
+					    <a href="<%= episode_url(episode) %>">
+					    	<%= image_tag episode.video_thumbnail_url %>
+					    </a>
+
+					    <div class='episode-description'>
+					        <div class='description_content'>"<%= episode.title %>"</div>
+					    </div>
+					</div>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>
