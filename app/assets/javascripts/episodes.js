@@ -1,5 +1,25 @@
+
+function isScrolledIntoView(elem)
+{
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
 $(document).ready(function() {
-	$(".video").waypoint(function(event, direction) {
+  	$('#interviews').jcarousel({
+        // Configuration goes here
+        wrap: "circular"
+    });		
+	if (isScrolledIntoView($(".underlined"))) {
+		$(".jcarousel-skin-tango").fadeIn("fast");
+		$(".episodes-indicator").fadeOut("fast");
+	} 
+	$(".scroll-by-div").waypoint(function(event, direction) {
 		if (direction == "down") {
 			$(".jcarousel-skin-tango").fadeIn("fast");
 			$(".episodes-indicator").fadeOut("fast");
@@ -8,10 +28,7 @@ $(document).ready(function() {
 			$(".episodes-indicator").fadeIn("fast");
 		}
 		
-	});			
-
-  	jQuery('#interviews').jcarousel({
-        // Configuration goes here
-        wrap: "circular"
-    });	
+	}, {
+		offset: "40%"
+	});					
 });
