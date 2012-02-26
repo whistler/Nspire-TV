@@ -1,13 +1,13 @@
 .video {
-	margin-top: 5px;
+	margin-top: 15px;
 	width: 800px;
 	margin-right: auto;
 	margin-left: auto;
 }
 
 .video .category {
-	padding-right: 5px;
-	padding-bottom: 5px;
+	margin-top: 10px;
+	padding-right: 0px;
 	float: right;
 }
 
@@ -38,18 +38,18 @@
 }
 
 .video .social {
+	padding-left: 5px;
+	display: block;
 	margin-top: 2px;
-	width: 290px;
 	float: right;
-	text-align: right;
 }
 
 .video .social .social-elem {
-	vertical-align: top;
+	vertical-align: bottom;
 }
 
 .video .description {
-	text-align: right;	
+	text-align: left;	
 }
 
 .video .description p {	
@@ -69,19 +69,38 @@
 	padding-right: 10px;
 }
 
-.episodes {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 200px;
-	max-height: 500px;
-	overflow: auto;
+.episodes-indicator {
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+
+    background-image: url(<%= asset_path "down.png" %>);
+    background-repeat: no-repeat;
+    background-position: 50% 80%;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;    
+	text-align: center;
+}
+
+.episodes-indicator p {
+	font-size: 12px;
+	margin-top: 5px;
+	font-weight: bold;
+	color: #676767;
 }
 
 .episode {
+	display: inline-block;
 	width: 192px;
 	padding-top: 5px;
 	padding-left: 5px;
+	white-space: normal;
+	font-size: 12px;
 }
 
 div.episode-image {
@@ -127,14 +146,6 @@ div.episode-image {
 .episode-info {	
 }
 
-.nspire-logo {
-	margin-top: 10px;
-	display: block;
-	width: 28px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 .comments-seperator {
 	left: 0;
 	position: absolute;
@@ -146,22 +157,26 @@ div.episode-image {
 }
 
 .comments {
-	width: 600px;
+	margin-top: 15px;
 }
 .fb-comments {
 	padding-top: 4px;
 }
 
 .post-fold {
-	margin-top: 10px;
-	padding-left: 40px;
-	padding-right: 40px;
+	margin-top: 20px;
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
+	width: 800px;
 	padding-bottom: 10px;
 }
 
 .underlined {
 	border-bottom: 1px #333 solid;
+}
+
+
+.footer {
+	padding-bottom: 155px;
 }
