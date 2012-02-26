@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-	margin-top: 0px;
+	margin-top: 30px;
 }
 
 .inner-container {
@@ -20,20 +20,75 @@ body {
 	margin-right: auto;
 }
 
+.link-bar {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	font-size: 12px;
+}
+
+.link-bar .links ul {
+	list-style: none;
+}
+
+.link-bar .links {
+	width: 550px;
+	margin-left: auto;
+	padding-right: 200px;
+}
+
+.link-bar .links li {
+	height: 30px;
+	width: 70px;
+	line-height: 30px;
+	padding-left: 4px;
+	padding-right: 4px;
+	display: inline-block;
+	background: url(<%= asset_path "topbar.png" %>) repeat-x;
+
+	text-align: center;
+
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.link-bar .links .tv {
+	font-weight: bold;
+}
+
+.link-bar .links a {
+	color: #006893;
+	text-decoration: none;
+}
+
+.link-bar .links a:visited {
+
+}
+
+.link-bar .links a:hover {
+	font-weight: bold;
+}
+
 .header {
 	padding-bottom: 10px;
-	text-align: center;
 }
 
 .header h2 {
+	font-weight: normal;
+	color: #006893;
 	text-align: right;
-	margin-top: 8px;
-	font-size: 1.5em;
+	margin-top: 20px;
+	font-size: 1.6em;
 }
 
 .header .logo img {
-	width: 150px;
-	height: 41px;
+	margin-left: 100px;
+	width: 200px;
+	height: 55px;
 }
 
 .seperator {

@@ -8,27 +8,17 @@
 </head>
 <body>
 <div class="scroll-by-div"></div>
-<div class="navbar">
-  <div class="navbar-inner">
-    <div class="container">
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
-      <!-- <a class="brand" href="#">Project name</a> -->
-      <div class="nav-collapse">
-        <ul class="nav">
+<div class="link-bar">
+    <div class="links">
+        <ul>
           <li><a href="http://nspire.org">Nspire</a></li>
           <li><a href="http://nbtc.ca">NBTC</a></li>
           <li><a href="http://discovery.nspire.org/">Discovery</a></li>
 		      <li><a href="http://jot.nspire.org/">JOT</a></li>
 		      <li><a href="http://nteract.nspire.org/">Nteract</a></li>
-		      <li><a href="<%= root_url %>">Nspire TV</a></li>
+		      <li><a href="<%= root_url %>" class="tv">Nspire TV</a></li>
         </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </div>
+      </div>
 </div>
 
 <div class="container">
@@ -38,7 +28,7 @@
   			<a href="<%= root_path %>"><%= image_tag "logo.png" %></a>
   		</div>
    		<div class="span7">
-  			<h2>inspiring young leaders from around the world</h2>
+  			<h2>Inspiring young leaders from around the world</h2>
   		</div>
   	</div>
 
