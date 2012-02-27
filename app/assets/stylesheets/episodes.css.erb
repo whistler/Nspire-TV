@@ -10,25 +10,18 @@
 	margin-left: auto;
 }
 
-.video .category {
-	margin-top: 10px;
-	padding-right: 0px;
-	float: right;
-}
-
-.video .category span {
-	text-transform: uppercase;
-	margin-right: -15px;
-}
-
 .video .title {
+	text-align: right;
+}
+
+.video .title p {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.video .interview-description {
 	position: relative;		
 }
-
-.video h2 {
-	
-}
-
 
 .video .embed iframe {
 	width: 800px;
@@ -39,24 +32,35 @@
 }
 
 .video .social {
-	padding-left: 5px;
+	position: relative;
 	display: block;
-	margin-top: 2px;
+	margin-top: 8px;
+	height: 64px;
+	width: 140px;
 	float: right;
 }
 
-.video .social .social-elem {
-	vertical-align: bottom;
+.video .social .facebook {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.video .social .twitter {
+	position: absolute;
+	bottom: 0;
+	top: 1px;
+	right: 58px;
 }
 
 .video .description {
 	margin-top: 4px;
-	text-align: left;	
+	text-align: left;
 }
 
 .video .description p {	
 	line-height: 100%;
-	font-weight: 600;
+	text-transform: uppercase;
 }
 
 .video .long-description {
@@ -83,10 +87,10 @@
     background-image: url(<%= asset_path "down.png" %>);
     background-repeat: no-repeat;
     background-position: 50% 80%;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;    
-	text-align: center;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;    
+		text-align: center;
 }
 
 .episodes-indicator p {
