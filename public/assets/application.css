@@ -4451,7 +4451,7 @@ div.episode-image {
     position: absolute;
     top: 65px;
     right: 5px;
-    width: 32px;
+    width: 27px;
     height: 32px;
     cursor: pointer;
     background: transparent url(/assets/next-horizontal.png) no-repeat 0 0;
@@ -4484,7 +4484,7 @@ div.episode-image {
     position: absolute;
     top: 65px;
     left: 5px;
-    width: 32px;
+    width: 27px;
     height: 32px;
     cursor: pointer;
     background: transparent url(/assets/prev-horizontal.png) no-repeat 0 0;

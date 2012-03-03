@@ -12,8 +12,8 @@ function isScrolledIntoView(elem)
 
 $(document).ready(function() {
   	$('#interviews').jcarousel({
-        // Configuration goes here
-        wrap: "circular"
+        // // Configuration goes here
+        // wrap: "circular"
     });		
 	if (isScrolledIntoView($(".underlined"))) {
 		$(".jcarousel-skin-tango").fadeIn("fast");
