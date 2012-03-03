@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120216015330) do
+ActiveRecord::Schema.define(:version => 20120303042221) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20120216015330) do
 
   create_table "episodes", :force => true do |t|
     t.string   "title"
-    t.string   "description"
+    t.text     "description",    :limit => 255
     t.string   "video_url"
     t.integer  "category_id"
     t.integer  "interviewee_id"

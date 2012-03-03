@@ -36,7 +36,7 @@
 	</div>
 
 	<div class="episodes-indicator">
-		<p>MORE</p>
+		<p><a href="#" onclick="$('html, body').animate({scrollTop: $('.comments').height()}, 800);">MORE</a></p>
 	</div>
 
 	<ul class="jcarousel-skin-tango" id="interviews">
@@ -48,7 +48,7 @@
 			    </a>
 
 			    <div class='episode-description'>
-			        <div class='description_content'>"<%= episode.title %>"</div>
+			        <div class='description_content'><%= episode.title %></div>
 			    </div>
 			</div>
 		</li>
