@@ -41,53 +41,16 @@
 
 	<ul class="jcarousel-skin-tango" id="interviews">
 		<% @episodes.each do |episode| %>
-			<li class="episode">
-				<div class='episode-image'>
-				    <a href="<%= episode_url(episode) %>">
-				    	<%= image_tag episode.video_thumbnail_url %>
-				    </a>
+		<li class="episode">
+			<div class='episode-image'>
+			    <a href="<%= episode_url(episode) %>">
+			    	<%= image_tag episode.video_thumbnail_url %>
+			    </a>
 
-				    <div class='episode-description'>
-				        <div class='description_content'>"<%= episode.title %>"</div>
-				    </div>
-				</div>
-			</li>
-
-			<li class="episode">
-				<div class='episode-image'>
-				    <a href="<%= episode_url(episode) %>">
-				    	<%= image_tag episode.video_thumbnail_url %>
-				    </a>
-
-				    <div class='episode-description'>
-				        <div class='description_content'>"<%= episode.title %>"</div>
-				    </div>
-				</div>
-			</li>
-			
-			<li class="episode">
-				<div class='episode-image'>
-				    <a href="<%= episode_url(episode) %>">
-				    	<%= image_tag episode.video_thumbnail_url %>
-				    </a>
-
-				    <div class='episode-description'>
-				        <div class='description_content'>"<%= episode.title %>"</div>
-				    </div>
-				</div>
-			</li>										
-
-
-			<li class="episode">
-				<div class='episode-image'>
-				    <a href="<%= episode_url(episode) %>">
-				    	<%= image_tag episode.video_thumbnail_url %>
-				    </a>
-
-				    <div class='episode-description'>
-				        <div class='description_content'>"<%= episode.title %>"</div>
-				    </div>
-				</div>
-			</li>	
+			    <div class='episode-description'>
+			        <div class='description_content'>"<%= episode.title %>"</div>
+			    </div>
+			</div>
+		</li>
 		<% end %>
 	</ul>
