@@ -1,7 +1,9 @@
 class EpisodesController < ApplicationController
 	def index
+		offset = rand(Episode.count - 1) + 1
+
 		@episodes = Episode.find(:all)
-		@featured = @episodes.last
+		@featured = Episode.first(:offset => offset)
 
 		respond_to do |f|
 			f.html
