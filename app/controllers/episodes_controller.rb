@@ -13,7 +13,7 @@ class EpisodesController < ApplicationController
 	def show
 		@episodes = Episode.find(:all)
 		@featured = Episode.find(params[:id])
-
+		
 		render 'index'
 	end
 end

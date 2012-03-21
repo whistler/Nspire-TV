@@ -5,6 +5,7 @@
 		<!-- Video -->
 		<div class="embed">
 			<%= raw @featured.video_embed_html %>
+			<!-- <img src="http://placehold.it/800x544" /> -->
 		</div>
 
 		<div class="interview-description">
@@ -21,7 +22,7 @@
 
 			<div class="description">
 				<p><%= @featured.interviewee.name %> &mdash; <%= @featured.interviewee.position %> at <%= @featured.interviewee.company %></p>
-			</div>						
+			</div>
 			<div class="long-description">
 				<p><%= @featured.description %></p>
 			</div>
@@ -29,9 +30,9 @@
 	</div>
 
 	<div class="post-fold">
+		<p class="underlined">&nbsp;</P>	    
 		<div class="comments">
-			<p class="underlined">&nbsp;</P>
-			<div class="fb-comments" data-href="<%= episode_url(@featured) %>" data-num-posts="2" data-width="800"></div>				
+			<div class="fb-comments" data-href="<%= episode_url(@featured) %>" data-num-posts="2"></div>
 		</div>
 	</div>
 
